@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es" class="w-full h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar Sesión</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              // Colores para modo claro
+              "blue-primary": "#1D428A",
+              "red-primary": "#7E021A",
+              "background-light": "#FFFFFF",
+              "surface-light": "#F0F5FF",
+              "on-background-light": "#0D224B",
+              "on-surface-light": "#333333",
+              "accent-light": "#84AEFF",
+              // Colores para modo oscuro
+              "blue-primary-dark": "#90B4FF",
+              "red-primary-dark": "#FF6B6B",
+              "background-dark": "#121212",
+              "surface-dark": "#1E1E1E",
+              "on-background-dark": "#EAEAEA",
+              "on-surface-dark": "#CCCCCC",
+              "accent-dark": "#5C8DFF",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="w-full h-full overflow-hidden flex flex-col justify-center items-center bg-background-light dark:bg-background-dark text-on-background-light dark:text-on-background-dark"
+  >
+    <div>
+        <img src="./source/images/background2.jpg" alt="background-image"
+        class="
+            absolute
+            top-0 right-0 
+            hidden
+            dark:block
+            dark:opacity-20
+            
+        ">
+    </div>
+    <main class="">
+      <button
+        id="theme-toggle"
+        class="absolute top-0 right-0 m-6 px-4 py-2 rounded-lg bg-blue-primary dark:bg-red-primary-dark transition"
+      >
+        <img src="./source/icons/sun.svg" class="w-4" alt="" />
+      </button>
+      <div
+        class="p-8 rounded-xl bg-white/20 dark:bg-black/20 backdrop-blur-md border border-white/30 dark:border-white/10 shadow-lg"
+      >
+        <h1 class="text-2xl font-semibold">Inicio de Sesión</h1>
+        <p class="py-4 opacity-85">
+          Inicia sesión con tu cuenta de JhomilMotors
+        </p>
+        <form action="" method="">
+          <div class="flex flex-col">
+            <label for="email" class="font-semibold">Correo</label>
+            <input
+              class="my-2 py-4 px-2 bg-surface-light dark:bg-surface-dark text-on-surface-light dark:text-on-surface-dark rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 dark:focus:ring-red-primary-dark"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="tu.email@gmail.com"
+            />
+          </div>
+          <div class="flex flex-col my-4">
+            <label for="password" class="font-semibold">Contraseña</label>
+            <input
+              class="my-2 py-4 px-2 bg-surface-light  dark:bg-surface-dark text-on-surface-light dark:text-on-surface-dark rounded-lg focus:ring-blue-400 dark:focus:ring-red-primary-dark focus:outline-none focus:ring-2"
+              type="password"
+              name="password"
+              id="password"
+              placeholder="introduce aquí tu contraseña"
+            />
+          </div>
+          <button
+            type="submit"
+            class="w-full py-4 px-2 rounded-2xl border border-background-dark dark:border-background-light hover:border-transparent dark:hover:border-transparent text-background-dark hover:text-background-light dark:text-background-light hover:bg-blue-primary dark:hover:bg-red-primary-dark transition-all ease-linear duration-200"
+          >
+            Iniciar Sesión
+          </button>
+        </form>
+        <p class="py-4 text-center">
+          ¿No tienes una cuenta?
+          <span
+            ><a
+              href="#"
+              class="hover:text-blue-primary dark:hover:text-red-primary-dark font-semibold"
+              >registrarse</a
+            ></span
+          >
+        </p>
+        <!-- Separador "o" -->
+        <div class="flex items-center">
+          <div
+            class="flex-grow h-px bg-on-background-light dark:bg-on-background-dark opacity-50"
+          ></div>
+          <span
+            class="mx-4 text-on-background-light dark:text-on-background-dark"
+            >o</span
+          >
+          <div
+            class="flex-grow h-px bg-on-background-light dark:bg-on-background-dark opacity-50"
+          ></div>
+        </div>
+        <a href="#"
+          type="submit"
+          class="w-full flex justify-center my-4 rounded-2xl border border-background-dark hover:border-blue-primary dark:hover:border-red-primary-dark dark:border-background-light transition-all ease-in duration-200"
+        >
+          <img
+            src="./source/icons/google-logo.svg"
+            class="py-4 px-2"
+            alt="google-icon"
+          />
+        </a>
+      </div>
+    </main>
+    <script>
+      const themeToggle = document.getElementById("theme-toggle");
+      const htmlElement = document.documentElement;
+      themeToggle.addEventListener("click", () => {
+        htmlElement.classList.toggle("dark");
+        if (htmlElement.classList.contains("dark")) {
+          localStorage.setItem("theme", "dark");
+        } else {
+          localStorage.setItem("theme", "light");
+        }
+      });
+      if (localStorage.getItem("theme") === "dark") {
+        htmlElement.classList.add("dark");
+      } else {
+        htmlElement.classList.remove("dark");
+      }
+    </script>
+  </body>
+</html>
