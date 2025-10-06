@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind_colors.js"></script>
+    <title>Tu Cuenta</title>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-on-background-light dark:text-on-background-dark"
+  >
+    <header class=""></header>
+
+    <main class="w-full mt-14 ">
+      <h1 class="text-center font-semibold text-3xl">Mi Cuenta</h1>
+      <div class="w-9/12 mx-auto mt-16 flex flex-col  md:flex-row">
+        <div class="flex flex-col flex-wrap w-full md:max-w-64 ">
+          <div class="w-full">
+            <p class="font-bold w-full">Fabricio</p>
+            <p class="w-full">fabricio.gg@gmail.com</p>
+          </div>
+          <a
+            href="#"
+            class="py-4 mt-2 border-b-2 border-blue-primary dark:border-blue-primary-dark w-full "
+            ><span>Mi cuenta</span></a
+          >
+          <a
+            href="#"
+            class="py-4 hover:border-b-2 border-blue-primary dark:border-blue-primary-dark"
+            ><span>Historial de compras</span></a
+          >
+          <a
+            href="#"
+            class="py-4 mb-4 hover:border-b-2 border-blue-primary dark:border-blue-primary-dark"
+            ><span>Cerrar Sesión</span></a
+          >
+        </div>
+        <div>
+          <div class="w-full ml-0 mt-4 md:mt-0 md:ml-16">
+            <h2 class="font-semibold text-xl underline">Mis datos</h2>
+            <form action="" class="grid grid-cols-2 gap-3 mt-8">
+              <input
+                type="text"
+                name=""
+                id=""
+                class="p-3 outline-none rounded-lg bg-background-light dark:bg-background-dark shadow-neumo-elevate dark:shadow-neumo-elevate-d focus:shadow-neumo-depress dark:focus:shadow-neumo-depress-d transition-shadow duration-200 ease-in-out"
+                placeholder="Nombres *"
+              />
+              <input
+                type="text"
+                name=""
+                id=""
+                class="p-3 outline-none rounded-lg bg-background-light dark:bg-background-dark shadow-neumo-elevate dark:shadow-neumo-elevate-d focus:shadow-neumo-depress dark:focus:shadow-neumo-depress-d transition-shadow duration-200 ease-in-out"
+                placeholder="Apellidos *"
+              />
+              <input
+                type="text"
+                name=""
+                id=""
+                class="p-3 outline-none rounded-lg bg-background-light dark:bg-background-dark shadow-neumo-elevate dark:shadow-neumo-elevate-d focus:shadow-neumo-depress dark:focus:shadow-neumo-depress-d transition-shadow duration-200 ease-in-out"
+                placeholder="Email@gmail.com *"
+              />
+              <input
+                type="text"
+                name=""
+                id=""
+                class="p-3 outline-none rounded-lg bg-background-light dark:bg-background-dark shadow-neumo-elevate dark:shadow-neumo-elevate-d focus:shadow-neumo-depress dark:focus:shadow-neumo-depress-d transition-shadow duration-200 ease-in-out"
+                placeholder="Teléfono *"
+              />
+              <input
+                type="text"
+                name=""
+                id=""
+                class="p-3 outline-none rounded-lg bg-background-light dark:bg-background-dark shadow-neumo-elevate dark:shadow-neumo-elevate-d focus:shadow-neumo-depress dark:focus:shadow-neumo-depress-d transition-shadow duration-200 ease-in-out"
+                placeholder="DNI *"
+              />
+              <br />
+              <button
+                class="mt-2 focus:outline-none py-3 px-8 rounded-2xl border border-background-dark dark:border-background-light hover:border-transparent dark:hover:border-transparent text-background-dark hover:text-background-light dark:text-background-light hover:bg-blue-primary dark:hover:bg-red-primary-dark transition-all ease-linear duration-200 max-w-fit"
+              >
+                Guardar
+              </button>
+            </form>
+          </div>
+          <div class="w-full ml-0 md:ml-16 mt-10 md:mt-6">
+            <h2 class="font-semibold text-xl underline">Datos de envío</h2>
+
+            <form action="" class="grid grid-cols-2 gap-3 mt-8">
+              <input
+                type="text"
+                name=""
+                id=""
+                class="p-3 outline-none rounded-lg bg-background-light dark:bg-background-dark shadow-neumo-elevate dark:shadow-neumo-elevate-d focus:shadow-neumo-depress dark:focus:shadow-neumo-depress-d transition-shadow duration-200 ease-in-out"
+                placeholder="Dirección *"
+              />
+              <input
+                type="text"
+                name=""
+                id=""
+                class="p-3 outline-none rounded-lg bg-background-light dark:bg-background-dark shadow-neumo-elevate dark:shadow-neumo-elevate-d focus:shadow-neumo-depress dark:focus:shadow-neumo-depress-d transition-shadow duration-200 ease-in-out"
+                placeholder="Departamento *"
+              />
+              <input
+                type="text"
+                name=""
+                id=""
+                class="p-3 outline-none rounded-lg bg-background-light dark:bg-background-dark shadow-neumo-elevate dark:shadow-neumo-elevate-d focus:shadow-neumo-depress dark:focus:shadow-neumo-depress-d transition-shadow duration-200 ease-in-out"
+                placeholder="Provincia *"
+              />
+              <input
+                type="text"
+                name=""
+                id=""
+                class="p-3 outline-none rounded-lg bg-background-light dark:bg-background-dark shadow-neumo-elevate dark:shadow-neumo-elevate-d focus:shadow-neumo-depress dark:focus:shadow-neumo-depress-d transition-shadow duration-200 ease-in-out"
+                placeholder="Distrito *"
+              />
+
+              <button
+                class="mt-2 focus:outline-none py-3 px-8 rounded-2xl border border-background-dark dark:border-background-light hover:border-transparent dark:hover:border-transparent text-background-dark hover:text-background-light dark:text-background-light hover:bg-blue-primary dark:hover:bg-red-primary-dark transition-all ease-linear duration-200 max-w-fit"
+              >
+                Guardar
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
